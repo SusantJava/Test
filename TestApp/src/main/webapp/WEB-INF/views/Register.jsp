@@ -1,15 +1,24 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<!DOCTYPE html>
 <html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
 <body>
-<h1>Welcome to Shipment Type Register </h1>
-<form action="save" method=POST>
+<h2>Welcome to Shipment Type Register </h2>
+<form:form action="save" method="POST">
+
 <pre>
-Shipment Mode:<select name="ShipmentMode">
-              <option value= " ">--select--</option>
-              <option value= "AIR">Air</option>
-              <option value= "TRUCK">Truck</option>
-              <option value= "SHIP">Ship</option>
-              <option value= "TRAIN">Train</option>
-</select>
+Shipment Mode:<form:select path="ShipmentMode">
+              <form:option value= " ">--select--</option>
+              <form:option value= "AIR">Air</option>
+              <form:option value= "TRUCK">Truck</option>
+              <form:option value= "SHIP">Ship</option>
+              <from:option value= "TRAIN">Train</option>
+</form:select>
 Shipment Code:<input type="text" name="ShipmentCode"/>
 Enable Shipment:<select name="enableShipment">
                    <option value="">--select---</option>
